@@ -1,0 +1,31 @@
+
+:root {
+  --cell-border: 1px solid grey;
+  --grid-size: 32;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+
+main {
+  min-width: 400px;
+  min-height: 400px;
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-template-rows: repeat(var(--grid-size), 1fr);
+  border-top: var(--cell-border);
+  border-left: var(--cell-border);
+}
+
+main div {  
+  border-right: var(--cell-border);
+  border-bottom: var(--cell-border);
+}
